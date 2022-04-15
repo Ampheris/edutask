@@ -71,6 +71,7 @@ class DAO:
         except Exception as e:
             raise
 
+    # find one specific object by id
     def findOne(self, id: str):
         """Find one specific object in the collection with the _id property equal to the given id.
 
