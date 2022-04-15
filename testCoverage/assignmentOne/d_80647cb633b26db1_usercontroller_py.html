@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=emulateIE7" http-equiv="X-UA-Compatible"/>
+    <title>Coverage for C:\Users\mathi\Documents\edutask\backend\src\controllers\usercontroller.py: 79%</title>
+    <link href="favicon_32.png" rel="icon" sizes="32x32">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script defer src="coverage_html.js" type="text/javascript"></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>C:\Users\mathi\Documents\edutask\backend\src\controllers\usercontroller.py</b>:
+            <span class="pc_cov">79%</span>
+        </h1>
+        <div id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img alt="Show/hide keyboard shortcuts" id="keyboard_icon" src="keybd_closed.png"/>
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div>
+                    <p class="keyhelp">
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p class="keyhelp">
+                        <kbd>j</kbd>
+                        <kbd>k</kbd> &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p class="keyhelp">
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p class="keyhelp">
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h2>
+            <span class="text">24 statements &nbsp;</span>
+            <button class="run button_toggle_run" data-shortcut="r" title="Toggle lines run" type="button" value="run">
+                19<span class="text"> run</span></button>
+            <button class="mis show_mis button_toggle_mis" data-shortcut="m" title="Toggle lines missing" type="button"
+                    value="mis">5<span class="text"> missing</span></button>
+            <button class="exc show_exc button_toggle_exc" data-shortcut="x" title="Toggle lines excluded" type="button"
+                    value="exc">0<span class="text"> excluded</span></button>
+        </h2>
+        <div style="display: none;">
+            <button class="button_next_chunk" data-shortcut="j" type="button">Next highlighted chunk</button>
+            <button class="button_prev_chunk" data-shortcut="k" type="button">Previous highlighted chunk</button>
+            <button class="button_top_of_page" data-shortcut="0" type="button">Goto top of page</button>
+            <button class="button_first_chunk" data-shortcut="1" type="button">Goto first highlighted chunk</button>
+        </div>
+    </div>
+</header>
+<main id="source">
+    <p class="run"><span class="n"><a href="#t1" id="t1">1</a></span><span class="t"><span
+            class="key">import</span> <span class="nam">re</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t2" id="t2">2</a></span><span class="t"><span class="key">from</span> <span
+            class="nam">backend</span><span class="op">.</span><span class="nam">src</span><span
+            class="op">.</span><span class="nam">controllers</span><span class="op">.</span><span
+            class="nam">controller</span> <span class="key">import</span> <span
+            class="nam">Controller</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t3" id="t3">3</a></span><span class="t"><span class="key">from</span> <span
+            class="nam">backend</span><span class="op">.</span><span class="nam">src</span><span
+            class="op">.</span><span class="nam">util</span><span class="op">.</span><span class="nam">dao</span> <span
+            class="key">import</span> <span class="nam">DAO</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t4" id="t4">4</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t5" id="t5">5</a></span><span class="t"><span
+            class="nam">emailValidator</span> <span class="op">=</span> <span class="nam">re</span><span
+            class="op">.</span><span class="nam">compile</span><span class="op">(</span><span
+            class="str">r'.*@.*'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t6" id="t6">6</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t7" id="t7">7</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t8" id="t8">8</a></span><span class="t"><span
+            class="key">class</span> <span class="nam">UserController</span><span class="op">(</span><span class="nam">Controller</span><span
+            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t9" id="t9">9</a></span><span class="t">    <span
+            class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span
+            class="nam">self</span><span class="op">,</span> <span class="nam">dao</span><span class="op">:</span> <span
+            class="nam">DAO</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span>
+    </p>
+    <p class="run"><span class="n"><a href="#t10" id="t10">10</a></span><span class="t">        <span
+            class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span
+            class="nam">__init__</span><span class="op">(</span><span class="nam">dao</span><span
+            class="op">=</span><span class="nam">dao</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
+    </p>
+    <p class="pln"><span class="n"><a href="#t11" id="t11">11</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t12" id="t12">12</a></span><span class="t">    <span class="key">def</span> <span
+            class="nam">get_user_by_email</span><span class="op">(</span><span class="nam">self</span><span
+            class="op">,</span> <span class="nam">email</span><span class="op">:</span> <span
+            class="nam">str</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span>
+    </p>
+    <p class="pln"><span class="n"><a href="#t13" id="t13">13</a></span><span class="t">        <span class="str">"""Given a valid email address of an existing account, return the user object contained in the database associated </span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t14" id="t14">14</a></span><span class="t"><span class="str">        to that user. For now, do not assume that the email attribute is unique. Output an error message containing the email</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t15" id="t15">15</a></span><span class="t"><span class="str">        address if the search returns multiple users.</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t16" id="t16">16</a></span><span class="t"><span
+            class="str">        </span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t17" id="t17">17</a></span><span class="t"><span class="str">        parameters:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t18" id="t18">18</a></span><span class="t"><span class="str">            email -- an email address string </span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t19" id="t19">19</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t20" id="t20">20</a></span><span class="t"><span class="str">        returns:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t21" id="t21">21</a></span><span class="t"><span class="str">            user -- the user object associated to that email address (if multiple users are associated to that email: return the first one)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t22" id="t22">22</a></span><span class="t"><span class="str">            None -- if no user is associated to that email address</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t23" id="t23">23</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t24" id="t24">24</a></span><span class="t"><span class="str">        raises:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t25" id="t25">25</a></span><span class="t"><span class="str">            ValueError -- in case the email parameter is not valid (i.e., conforming &lt;local-part>@&lt;domain>.&lt;host>)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t26" id="t26">26</a></span><span class="t"><span class="str">            Exception -- in case any database operation fails</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t27" id="t27">27</a></span><span class="t"><span
+            class="str">        """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t28" id="t28">28</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t29" id="t29">29</a></span><span class="t">        <span
+            class="key">if</span> <span class="key">not</span> <span class="nam">re</span><span class="op">.</span><span
+            class="nam">fullmatch</span><span class="op">(</span><span class="nam">emailValidator</span><span
+            class="op">,</span> <span class="nam">email</span><span class="op">)</span><span
+            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t30" id="t30">30</a></span><span class="t">            <span class="key">raise</span> <span
+            class="nam">ValueError</span><span class="op">(</span><span
+            class="str">'Error: invalid email address'</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t31" id="t31">31</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t32" id="t32">32</a></span><span class="t">        <span
+            class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t33" id="t33">33</a></span><span class="t">            <span class="nam">users</span> <span
+            class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">dao</span><span
+            class="op">.</span><span class="nam">find</span><span class="op">(</span><span class="op">{</span><span
+            class="str">'email'</span><span class="op">:</span> <span class="nam">email</span><span
+            class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t34" id="t34">34</a></span><span class="t">            <span
+            class="key">if</span> <span class="nam">len</span><span class="op">(</span><span
+            class="nam">users</span><span class="op">)</span> <span class="op">==</span> <span class="num">1</span><span
+            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t35" id="t35">35</a></span><span class="t">                <span
+            class="key">return</span> <span class="nam">users</span><span class="op">[</span><span
+            class="num">0</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t36" id="t36">36</a></span><span class="t">            <span class="key">else</span><span
+            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t37" id="t37">37</a></span><span class="t">                <span
+            class="nam">print</span><span class="op">(</span><span class="str">f'Error: more than one user found with mail {email}'</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t38" id="t38">38</a></span><span class="t">                <span
+            class="key">return</span> <span class="nam">users</span><span class="op">[</span><span
+            class="num">0</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t39" id="t39">39</a></span><span class="t">        <span
+            class="key">except</span> <span class="nam">Exception</span> <span class="key">as</span> <span
+            class="nam">e</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t40" id="t40">40</a></span><span class="t">            <span class="key">raise</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t41" id="t41">41</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t42" id="t42">42</a></span><span class="t">    <span class="key">def</span> <span
+            class="nam">update</span><span class="op">(</span><span class="nam">self</span><span
+            class="op">,</span> <span class="nam">id</span><span class="op">,</span> <span class="nam">data</span><span
+            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t43" id="t43">43</a></span><span class="t">        <span
+            class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t44" id="t44">44</a></span><span class="t">            <span
+            class="nam">update_result</span> <span class="op">=</span> <span class="nam">super</span><span
+            class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">update</span><span
+            class="op">(</span><span class="nam">id</span><span class="op">=</span><span class="nam">id</span><span
+            class="op">,</span> <span class="nam">data</span><span class="op">=</span><span class="op">{</span><span
+            class="str">'$set'</span><span class="op">:</span> <span class="nam">data</span><span
+            class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t45" id="t45">45</a></span><span class="t">            <span
+            class="key">return</span> <span class="nam">update_result</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t46" id="t46">46</a></span><span class="t">        <span
+            class="key">except</span> <span class="nam">Exception</span> <span class="key">as</span> <span
+            class="nam">e</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t47" id="t47">47</a></span><span class="t">            <span
+            class="key">raise</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav"
+                                                                               href="https://coverage.readthedocs.io">coverage.py
+            v6.2</a>,
+            created at 2022-04-15 15:45 +0200
+        </p>
+    </div>
+</footer>
+</body>
+</html>
