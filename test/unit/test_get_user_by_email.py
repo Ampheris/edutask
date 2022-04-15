@@ -1,7 +1,6 @@
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, patch, call
 import pytest
 from backend.src.controllers.usercontroller import UserController
-
 
 class TestGetUserByEmail:
     def test_valid_email_one_user_exist(self):
