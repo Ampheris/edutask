@@ -5,7 +5,7 @@ import pymongo
 from dotenv import dotenv_values
 
 # create a data access object
-from src.util.validators import getValidator
+from backend.src.util.validators import getValidator
 
 import json
 from bson import json_util
@@ -66,7 +66,7 @@ class DAO:
     def findOne(self, id: str):
         """Find one specific object in the collection with the _id property equal to the given id.
 
-        parameters: 
+        parameters:
             id -- id value of the requested object
 
         returns:
@@ -83,9 +83,9 @@ class DAO:
 
     # find all objects that comply to the optional filter
     def find(self, filter=None, toid: list = None):
-        """Find all objects contained in the collection which comply to the given filter. 
+        """Find all objects contained in the collection which comply to the given filter.
 
-        parameters: 
+        parameters:
             filter -- dict containing key value pairs of properties and applicable filters
             toid -- list of properties (contained in the filter) which are MongoDB ObjectIDs and hence need to be converted
 
@@ -119,7 +119,7 @@ class DAO:
     def update(self, id: str, update_data: dict):
         """Find one specific object in the collection with the _id property equal to the given id and update its data according to the update_data.
 
-        parameters: 
+        parameters:
             id -- id value of the requested object
             update_data -- dict containing the update operation (top-level key values must be valid MongoDB update operators, see https://www.mongodb.com/docs/manual/reference/operator/update/#std-label-update-operators)
 
@@ -142,7 +142,7 @@ class DAO:
     def delete(self, id: str):
         """Find one specific object in the collection with the _id property equal to the given id and remove it from the collection
 
-        parameters: 
+        parameters:
             id -- id value of the requested object
 
         returns:
@@ -174,7 +174,7 @@ class DAO:
     def to_json(self, data):
         """Transform a MongoDB document into a json object.
 
-        paramenters: 
+        paramenters:
             data -- the MongoDB document
 
         returns:
