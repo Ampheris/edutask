@@ -13,7 +13,6 @@ from src.controllers.usercontroller import UserController
 from src.controllers.taskcontroller import TaskController
 from src.util.daos import getDao
 
-
 app = Flask('todoapp')
 
 # configure CORS for cross-origin resource sharing (between the frontend and backend)
@@ -33,12 +32,15 @@ def ping():
     VERSION = dotenv_values('.env').get('VERSION')
     return jsonify({'version': VERSION}), 200
 
+
 # simple population method that adds initial data to the database
 @app.route('/populate', methods=['POST'])
 @cross_origin()
 def populate():
     usercontroller = UserController(getDao(collection_name='user'))
-    taskcontroller = TaskController(tasks_dao=getDao(collection_name='task'), videos_dao=getDao(collection_name='video'), todos_dao=getDao(collection_name='todo'), users_dao=getDao(collection_name='user'))
+    taskcontroller = TaskController(tasks_dao=getDao(collection_name='task'),
+                                    videos_dao=getDao(collection_name='video'),
+                                    todos_dao=getDao(collection_name='todo'), users_dao=getDao(collection_name='user'))
 
     response = {'users': []}
     with open(f'./src/static/data/dummy.json', 'r') as f:
@@ -46,8 +48,8 @@ def populate():
 
         for userdata in dummydata:
             user = usercontroller.create({
-                'firstName': userdata['firstName'], 
-                'lastName': userdata['lastName'], 
+                'firstName': userdata['firstName'],
+                'lastName': userdata['lastName'],
                 'email': userdata['email']
             })
 
@@ -64,6 +66,7 @@ def populate():
 
     return jsonify(response), 200
 
+
 # main loop
 if __name__ == '__main__':
     print(app.url_map)
@@ -71,4 +74,3 @@ if __name__ == '__main__':
         app.run(host=os.environ.get('FLASK_BIND_IP'))
     else:
         app.run()
-    
