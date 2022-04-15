@@ -1,4 +1,5 @@
-from  src.util.dao import DAO
+from backend.src.util.dao import DAO
+
 
 class Controller:
     def __init__(self, dao: DAO):
