@@ -5,11 +5,12 @@ import pymongo
 from dotenv import dotenv_values
 
 # create a data access object
-from src.util.validators import getValidator
+from backend.src.util.validators import getValidator
 
 import json
 from bson import json_util
 from bson.objectid import ObjectId
+
 
 class DAO:
 
@@ -47,19 +48,19 @@ class DAO:
             raise
 
         # return the created object
-        obj = self.collection.find_one({ '_id': inserted_id })
+        obj = self.collection.find_one({'_id': inserted_id})
         return self.to_json(obj)
 
     # find one specific object by id
     def findOne(self, id: str):
         try:
-            obj = self.collection.find_one({ '_id': ObjectId(id) })
+            obj = self.collection.find_one({'_id': ObjectId(id)})
             return self.to_json(obj)
         except Exception as e:
             raise
 
     # find all objects that comply to the optional filter
-    def find(self, filter=None, toid: list=None):
+    def find(self, filter=None, toid: list = None):
         # if the filter contains attributes that are IDs, then they need to be converted
         if toid and len(toid) > 0:
             for i in toid:
@@ -92,7 +93,7 @@ class DAO:
             raise
 
     # delete an existing entry
-    def delete(self, id: str): 
+    def delete(self, id: str):
         try:
             result = self.collection.delete_one(
                 {'_id': ObjectId(id)}
