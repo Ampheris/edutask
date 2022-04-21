@@ -1,6 +1,7 @@
-# PA1417 Testing system
+0# PA1417 Testing system
 
-This system implements a simple task list, in which YouTube videos can be associated to todo lists in order to keep track of educational material. Please keep the following in mind:
+This system implements a simple task list, in which YouTube videos can be associated to todo lists in order to keep
+track of educational material. Please keep the following in mind:
 
 * The system contains intended flaws, which are to be identified applying test techniques.
 * The system is a work-in-progress, meaning that some functionalities are not yet implemented. Focus on the functionalities that already exist, everything else can be disregarded for now.

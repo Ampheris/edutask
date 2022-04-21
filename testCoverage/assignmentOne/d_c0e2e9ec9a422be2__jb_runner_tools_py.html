@@ -5,7 +5,7 @@
     <meta content="IE=emulateIE7" http-equiv="X-UA-Compatible"/>
     <title>Coverage for
         C:\Users\mathi\AppData\Local\JetBrains\Toolbox\apps\PyCharm-P\ch-0\213.7172.26\plugins\python\helpers\pycharm\_jb_runner_tools.py:
-        73%</title>
+        69%</title>
     <link href="favicon_32.png" rel="icon" sizes="32x32">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script defer src="coverage_html.js" type="text/javascript"></script>
@@ -15,7 +15,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>C:\Users\mathi\AppData\Local\JetBrains\Toolbox\apps\PyCharm-P\ch-0\213.7172.26\plugins\python\helpers\pycharm\_jb_runner_tools.py</b>:
-            <span class="pc_cov">73%</span>
+            <span class="pc_cov">69%</span>
         </h1>
         <div id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -29,6 +29,7 @@
                         <kbd>r</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
+                        <kbd>p</kbd>
                         &nbsp; toggle line displays
                     </p>
                     <p class="keyhelp">
@@ -52,6 +53,8 @@
                     value="mis">46<span class="text"> missing</span></button>
             <button class="exc show_exc button_toggle_exc" data-shortcut="x" title="Toggle lines excluded" type="button"
                     value="exc">0<span class="text"> excluded</span></button>
+            <button class="par run show_par button_toggle_par" data-shortcut="p" title="Toggle lines partially run"
+                    type="button" value="par">15<span class="text"> partial</span></button>
         </h2>
         <div style="display: none;">
             <button class="button_next_chunk" data-shortcut="j" type="button">Next highlighted chunk</button>
@@ -87,10 +90,11 @@
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t12" id="t12">12</a></span><span class="t"><span class="com"># Some runners need it to "detect" TC and start protocol</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t13" id="t13">13</a></span><span class="t"><span
-            class="key">if</span> <span class="nam">teamcity_presence_env_var</span> <span class="key">not</span> <span
-            class="key">in</span> <span class="nam">os</span><span class="op">.</span><span
-            class="nam">environ</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t13" id="t13">13</a></span><span class="t"><span class="key">if</span> <span
+            class="nam">teamcity_presence_env_var</span> <span class="key">not</span> <span class="key">in</span> <span
+            class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">:</span>&nbsp;</span><span
+            class="r"><span class="annotate short">13&#x202F;&#x219B;&#x202F;19</span><span class="annotate long">line 13 didn't jump to line 19, because the condition on line 13 was never false</span></span>
+    </p>
     <p class="run"><span class="n"><a href="#t14" id="t14">14</a></span><span class="t">    <span
             class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span
             class="nam">teamcity_presence_env_var</span><span class="op">]</span> <span class="op">=</span> <span
@@ -148,9 +152,10 @@
             class="nam">match</span><span class="op">(</span><span class="str">"^([^\\s)(]+)(\\(.+\\))$"</span><span
             class="op">,</span> <span class="nam">part</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t36" id="t36">36</a></span><span class="t">    <span class="key">if</span> <span
-            class="key">not</span> <span class="nam">match</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t36" id="t36">36</a></span><span class="t">    <span
+            class="key">if</span> <span class="key">not</span> <span class="nam">match</span><span class="op">:</span>&nbsp;</span><span
+            class="r"><span class="annotate short">36&#x202F;&#x219B;&#x202F;39</span><span class="annotate long">line 36 didn't jump to line 39, because the condition on line 36 was never false</span></span>
+    </p>
     <p class="run"><span class="n"><a href="#t37" id="t37">37</a></span><span class="t">        <span
             class="key">return</span> <span class="op">[</span><span class="nam">part</span><span class="op">]</span>&nbsp;</span><span
             class="r"></span></p>
@@ -206,9 +211,11 @@
     <p class="run"><span class="n"><a href="#t54" id="t54">54</a></span><span class="t">    <span class="key">def</span> <span
             class="nam">_fill_manager</span><span class="op">(</span><span class="nam">self</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t55" id="t55">55</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t55" id="t55">55</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">self</span><span class="op">.</span><span
-            class="nam">parallel</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+            class="nam">parallel</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">55&#x202F;&#x219B;&#x202F;56</span><span class="annotate long">line 55 didn't jump to line 56, because the condition on line 55 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t56" id="t56">56</a></span><span class="t">            <span
             class="key">from</span> <span class="nam">_jb_parallel_tree_manager</span> <span
             class="key">import</span> <span class="nam">ParallelTreeManager</span>&nbsp;</span><span class="r"></span>
@@ -289,10 +296,12 @@
             class="key">if</span> <span class="nam">messageName</span> <span class="key">in</span> <span
             class="op">{</span><span class="str">"enteredTheMatrix"</span><span class="op">,</span> <span class="str">"testCount"</span><span
             class="op">}</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t85" id="t85">85</a></span><span class="t">            <span
+    <p class="par run show_par"><span class="n"><a href="#t85" id="t85">85</a></span><span class="t">            <span
             class="key">if</span> <span class="str">"_jb_do_not_call_enter_matrix"</span> <span
             class="key">not</span> <span class="key">in</span> <span class="nam">os</span><span class="op">.</span><span
-            class="nam">environ</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+            class="nam">environ</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">85&#x202F;&#x219B;&#x202F;87</span><span class="annotate long">line 85 didn't jump to line 87, because the condition on line 85 was never false</span></span>
+    </p>
     <p class="run"><span class="n"><a href="#t86" id="t86">86</a></span><span class="t">                <span
             class="nam">_old_service_messages</span><span class="op">.</span><span class="nam">message</span><span
             class="op">(</span><span class="nam">self</span><span class="op">,</span> <span
@@ -320,9 +329,11 @@
             class="op">=</span> <span class="nam">possible_location</span><span class="op">.</span><span class="nam">find</span><span
             class="op">(</span><span class="str">"("</span><span class="op">)</span>&nbsp;</span><span class="r"></span>
     </p>
-    <p class="run"><span class="n"><a href="#t96" id="t96">96</a></span><span class="t">            <span
+    <p class="par run show_par"><span class="n"><a href="#t96" id="t96">96</a></span><span class="t">            <span
             class="key">if</span> <span class="nam">loc</span> <span class="op">></span> <span class="num">0</span><span
-            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+            class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">96&#x202F;&#x219B;&#x202F;97</span><span class="annotate long">line 96 didn't jump to line 97, because the condition on line 96 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t97" id="t97">97</a></span><span class="t">                <span
             class="nam">possible_location</span> <span class="op">=</span> <span
             class="nam">possible_location</span><span class="op">[</span><span class="op">:</span><span
@@ -357,10 +368,11 @@
             class="nam">get_node_ids</span><span class="op">(</span><span class="nam">properties</span><span class="op">[</span><span
             class="str">"name"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t106" id="t106">106</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t106" id="t106">106</a></span><span class="t">        <span
             class="key">if</span> <span class="key">not</span> <span class="nam">current</span> <span
             class="key">and</span> <span class="key">not</span> <span class="nam">parent</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+            class="r"><span class="annotate short">106&#x202F;&#x219B;&#x202F;107</span><span class="annotate long">line 106 didn't jump to line 107, because the condition on line 106 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t107" id="t107">107</a></span><span class="t">            <span
             class="key">return</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t108" id="t108">108</a></span><span class="t">        <span class="com"># Shortcut for name</span>&nbsp;</span><span
@@ -660,10 +672,12 @@
             class="op">=</span> <span class="nam">_TREE_MANAGER_HOLDER</span><span class="op">.</span><span class="nam">manager</span><span
             class="op">.</span><span class="nam">get_node_ids</span><span class="op">(</span><span
             class="nam">testName</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t196" id="t196">196</a></span><span class="t">            <span
-            class="key">if</span> <span class="key">not</span> <span class="nam">current</span> <span
-            class="key">and</span> <span class="key">not</span> <span class="nam">parent</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t196" id="t196">196</a></span><span
+            class="t">            <span class="key">if</span> <span class="key">not</span> <span
+            class="nam">current</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">parent</span><span
+            class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">196&#x202F;&#x219B;&#x202F;197</span><span class="annotate long">line 196 didn't jump to line 197, because the condition on line 196 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t197" id="t197">197</a></span><span
             class="t">                <span class="key">return</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a href="#t198" id="t198">198</a></span><span class="t">            <span
@@ -676,9 +690,11 @@
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t200" id="t200">200</a></span><span class="t">            <span
             class="com"># TODO: Doc copy/paste with parent, extract</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t201" id="t201">201</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">testDuration</span> <span class="key">is</span> <span class="key">not</span> <span
-            class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t201" id="t201">201</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">testDuration</span> <span
+            class="key">is</span> <span class="key">not</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span
+            class="r"><span class="annotate short">201&#x202F;&#x219B;&#x202F;207</span><span class="annotate long">line 201 didn't jump to line 207, because the condition on line 201 was never false</span></span>
+    </p>
     <p class="run"><span class="n"><a href="#t202" id="t202">202</a></span><span class="t">                <span
             class="nam">duration_ms</span> <span class="op">=</span> <span class="nam">testDuration</span><span
             class="op">.</span><span class="nam">days</span> <span class="op">*</span> <span class="num">86400000</span> <span
@@ -697,9 +713,10 @@
             class="nam">duration_ms</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t206" id="t206">206</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t207" id="t207">207</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">is_suite</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t207" id="t207">207</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">is_suite</span><span class="op">:</span>&nbsp;</span><span
+            class="r"><span class="annotate short">207&#x202F;&#x219B;&#x202F;208</span><span class="annotate long">line 207 didn't jump to line 208, because the condition on line 207 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t208" id="t208">208</a></span><span
             class="t">                <span class="key">if</span> <span class="nam">is_parallel_mode</span><span
             class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span>
@@ -727,9 +744,10 @@
             class="nam">self</span><span class="op">.</span><span class="nam">_test_to_list</span><span
             class="op">(</span><span class="nam">testName</span><span class="op">)</span><span class="op">,</span> <span
             class="nam">_write_finished_message</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t215" id="t215">215</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t215" id="t215">215</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">commands</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+            class="r"><span class="annotate short">215&#x202F;&#x219B;&#x202F;216</span><span class="annotate long">line 215 didn't jump to line 216, because the condition on line 215 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t216" id="t216">216</a></span><span class="t">            <span
             class="nam">self</span><span class="op">.</span><span class="nam">do_commands</span><span
             class="op">(</span><span class="nam">commands</span><span class="op">)</span>&nbsp;</span><span
@@ -763,9 +781,11 @@
     <p class="pln"><span class="n"><a href="#t226" id="t226">226</a></span><span class="t">            <span
             class="com"># By executing commands we open or close suites(branches) since tests(leaves) are always reported by runner</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t227" id="t227">227</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">command</span> <span class="op">==</span> <span
-            class="str">"open"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t227" id="t227">227</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">command</span> <span
+            class="op">==</span> <span class="str">"open"</span><span class="op">:</span>&nbsp;</span><span
+            class="r"><span class="annotate short">227&#x202F;&#x219B;&#x202F;230</span><span class="annotate long">line 227 didn't jump to line 230, because the condition on line 227 was never false</span></span>
+    </p>
     <p class="run"><span class="n"><a href="#t228" id="t228">228</a></span><span class="t">                <span
             class="nam">self</span><span class="op">.</span><span class="nam">testStarted</span><span
             class="op">(</span><span class="nam">test_name</span><span class="op">,</span> <span
@@ -819,9 +839,10 @@
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t248" id="t248">248</a></span><span class="t"><span
             class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t249" id="t249">249</a></span><span class="t">    <span
+    <p class="par run show_par"><span class="n"><a href="#t249" id="t249">249</a></span><span class="t">    <span
             class="key">if</span> <span class="key">not</span> <span class="nam">targets</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+            class="r"><span class="annotate short">249&#x202F;&#x219B;&#x202F;250</span><span class="annotate long">line 249 didn't jump to line 250, because the condition on line 249 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t250" id="t250">250</a></span><span class="t">        <span
             class="key">return</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span
             class="r"></span></p>
@@ -850,9 +871,10 @@
             class="op">.</span><span class="nam">replace</span><span class="op">(</span><span
             class="str">"."</span><span class="op">,</span> <span class="nam">python_glue</span><span
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t258" id="t258">258</a></span><span class="t">        <span
-            class="key">if</span> <span class="nam">fs_part</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t258" id="t258">258</a></span><span class="t">        <span
+            class="key">if</span> <span class="nam">fs_part</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">258&#x202F;&#x219B;&#x202F;261</span><span class="annotate long">line 258 didn't jump to line 261, because the condition on line 258 was never false</span></span>
+    </p>
     <p class="run"><span class="n"><a href="#t259" id="t259">259</a></span><span class="t">            <span
             class="key">return</span> <span class="nam">fs_part</span><span class="op">.</span><span
             class="nam">replace</span><span class="op">(</span><span class="str">"/"</span><span
@@ -987,7 +1009,7 @@
             class="r"></span></p>
     <p class="run"><span class="n"><a href="#t304" id="t304">304</a></span><span class="t">    <span
             class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t305" id="t305">305</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t305" id="t305">305</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">os</span><span class="op">.</span><span class="nam">path</span><span
             class="op">.</span><span class="nam">abspath</span><span class="op">(</span><span
             class="nam">sys</span><span class="op">.</span><span class="nam">path</span><span class="op">[</span><span
@@ -995,16 +1017,19 @@
             class="nam">os</span><span class="op">.</span><span class="nam">path</span><span class="op">.</span><span
             class="nam">abspath</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span
             class="nam">environ</span><span class="op">[</span><span class="str">"PYCHARM_HELPERS_DIR"</span><span
-            class="op">]</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span>
+            class="op">]</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">305&#x202F;&#x219B;&#x202F;311</span><span class="annotate long">line 305 didn't jump to line 311, because the condition on line 305 was never false</span></span>
     </p>
     <p class="run"><span class="n"><a href="#t306" id="t306">306</a></span><span class="t">            <span
             class="nam">path</span> <span class="op">=</span> <span class="nam">sys</span><span class="op">.</span><span
             class="nam">path</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span
             class="num">0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t307" id="t307">307</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">path</span> <span class="key">not</span> <span class="key">in</span> <span
-            class="nam">sys</span><span class="op">.</span><span class="nam">path</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t307" id="t307">307</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">path</span> <span class="key">not</span> <span
+            class="key">in</span> <span class="nam">sys</span><span class="op">.</span><span
+            class="nam">path</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">307&#x202F;&#x219B;&#x202F;308</span><span
+            class="annotate long">line 307 didn't jump to line 308, because the condition on line 307 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t308" id="t308">308</a></span><span
             class="t">                <span class="nam">sys</span><span class="op">.</span><span class="nam">path</span><span
             class="op">.</span><span class="nam">append</span><span class="op">(</span><span
@@ -1056,7 +1081,7 @@
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav"
                                                                                href="https://coverage.readthedocs.io">coverage.py
             v6.2</a>,
-            created at 2022-04-15 15:45 +0200
+            created at 2022-04-15 16:20 +0200
         </p>
     </div>
 </footer>
