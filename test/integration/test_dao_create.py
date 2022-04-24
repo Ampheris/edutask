@@ -26,8 +26,6 @@ In particular, the validator has to make sure that:
 
         raises:
             WriteError - in case at least one of the validator criteria is violated
-            
-        
 """
 
 
@@ -62,20 +60,68 @@ class TestDaoCreate:
 
     # (2) every property complies to the bson data type constraint
     def test_firstname_not_comply(self):
-        pass
+        dao_user = DAO('user')
+        invalid_firstname_num = {'email': "john.doe@test.com", 'firstName': 123, 'lastName': 'Doe'}
+        invalid_firstname_bool = {'email': "john.doe@test.com", 'firstName': False, 'lastName': 'Doe'}
+        invalid_firstname_array = {'email': "john.doe@test.com", 'firstName': [1, 2, 3], 'lastName': 'Doe'}
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_firstname_num)
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_firstname_bool)
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_firstname_array)
 
     def test_lastname_not_comply(self):
-        pass
+        dao_user = DAO('user')
+        invalid_lastname_num = {'email': "john.doe@test.com", 'firstName': 'Jane', 'lastName': 123}
+        invalid_lastname_bool = {'email': "john.doe@test.com", 'firstName': 'Jane', 'lastName': True}
+        invalid_lastname_array = {'email': "john.doe@test.com", 'firstName': 'Jane', 'lastName': [1, 2, 3]}
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_lastname_num)
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_lastname_bool)
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_lastname_array)
 
     def test_email_not_comply(self):
-        pass
+        dao_user = DAO('user')
+        invalid_email_num = {'email': 123, 'firstName': 'Jane', 'lastName': 'Doe'}
+        invalid_email_bool = {'email': False, 'firstName': 'Jane', 'lastName': 'Doe'}
+        invalid_email_array = {'email': [1, 2, 3], 'firstName': 'Jane', 'lastName': 'Doe'}
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_email_num)
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_email_bool)
+
+        with pytest.raises(Exception):
+            dao_user.create(invalid_email_array)
 
     def test_tasks_not_comply(self):
         pass
 
     # (1) the data for the new object contains all required properties
     def test_does_not_have_all_required_properties(self):
-        pass
+        dao_user = DAO('user')
+        no_lastname = {'email': 'test@test.com', 'firstName': 'Jane'}
+        no_firstname = {'email': 'test@test.com', 'lastName': 'Doe'}
+        no_email = {'firstName': 'Jane', 'lastName': 'Doe'}
+
+        with pytest.raises(Exception):
+            dao_user.create(no_lastname)
+
+        with pytest.raises(Exception):
+            dao_user.create(no_firstname)
+
+        with pytest.raises(Exception):
+            dao_user.create(no_email)
 
     # Returns object, all 1-3 are good.
     def test_data_string_uniqueItems_true_all_props_true(self, adding_valid_user, dao):
