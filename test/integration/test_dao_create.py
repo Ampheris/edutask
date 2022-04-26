@@ -89,7 +89,7 @@ class TestDaoCreate:
                                  'lastName': 'Johnsson', 'tasks': [True]}
 
         tasks_not_array = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
-                                 'lastName': 'Johnsson', 'tasks': "test"}
+                           'lastName': 'Johnsson', 'tasks': "test"}
 
         with pytest.raises(Exception):
             sut.create(tasks_not_unique)
