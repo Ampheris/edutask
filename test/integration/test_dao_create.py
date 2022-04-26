@@ -33,7 +33,7 @@ In particular, the validator has to make sure that:
 
 @pytest.fixture
 def sut():
-    fabricated_filename = 'C:\\Users\\mathi\\Documents\\edutask\\backend\src\static\\validators\\test.json'
+    fabricated_filename = 'C:\\Users\\Stina\\PycharmProjects\\edutask\\backend\src\static\\validators\\test.json'
     fabricated_data = {
         "$jsonSchema": {
             "bsonType": "object",
@@ -78,14 +78,33 @@ class TestDaoCreate:
         # uniqueItem is for the tasks only since its the only array in the list.
         tasks_not_unique = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
                             'lastName': 'Johnsson', 'tasks': [1, 2, 2]}
+
         tasks_not_unique_two = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
                                 'lastName': 'Johnsson', 'tasks': ['test', 'test', 'hello']}
+
+        tasks_not_unique_three = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                                  'lastName': 'Johnsson', 'tasks': ["test", "hello", "hello"]}
+
+        tasks_not_unique_bool = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                                 'lastName': 'Johnsson', 'tasks': [True]}
+
+        tasks_not_array = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                                 'lastName': 'Johnsson', 'tasks': "test"}
 
         with pytest.raises(Exception):
             sut.create(tasks_not_unique)
 
         with pytest.raises(Exception):
             sut.create(tasks_not_unique_two)
+
+        with pytest.raises(Exception):
+            sut.create(tasks_not_unique_three)
+
+        with pytest.raises(Exception):
+            sut.create(tasks_not_unique_bool)
+
+        with pytest.raises(Exception):
+            sut.create(tasks_not_array)
 
     # (2) every property complies to the bson data type constraint
     def test_firstname_not_comply(self, sut):
