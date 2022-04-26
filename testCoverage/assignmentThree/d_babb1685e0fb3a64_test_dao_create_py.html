@@ -44,9 +44,9 @@
             </div>
         </div>
         <h2>
-            <span class="text">73 statements &nbsp;</span>
+            <span class="text">84 statements &nbsp;</span>
             <button class="run button_toggle_run" data-shortcut="r" title="Toggle lines run" type="button" value="run">
-                73<span class="text"> run</span></button>
+                84<span class="text"> run</span></button>
             <button class="mis show_mis button_toggle_mis" data-shortcut="m" title="Toggle lines missing" type="button"
                     value="mis">0<span class="text"> missing</span></button>
             <button class="exc show_exc button_toggle_exc" data-shortcut="x" title="Toggle lines excluded" type="button"
@@ -67,20 +67,17 @@
             class="key">import</span> <span class="nam">json</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a href="#t2" id="t2">2</a></span><span class="t"><span
             class="key">import</span> <span class="nam">os</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t3" id="t3">3</a></span><span class="t"><span class="key">from</span> <span
-            class="nam">unittest</span><span class="op">.</span><span class="nam">mock</span> <span
-            class="key">import</span> <span class="nam">patch</span><span class="op">,</span> <span class="nam">MagicMock</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t4" id="t4">4</a></span><span class="t"><span
+    <p class="run"><span class="n"><a href="#t3" id="t3">3</a></span><span class="t"><span
             class="key">import</span> <span class="nam">pytest</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t5" id="t5">5</a></span><span class="t"><span class="key">from</span> <span
+    <p class="run"><span class="n"><a href="#t4" id="t4">4</a></span><span class="t"><span class="key">from</span> <span
+            class="nam">bson</span> <span class="key">import</span> <span class="nam">ObjectId</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t5" id="t5">5</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t6" id="t6">6</a></span><span class="t"><span class="key">from</span> <span
             class="nam">backend</span><span class="op">.</span><span class="nam">src</span><span
             class="op">.</span><span class="nam">util</span><span class="op">.</span><span class="nam">dao</span> <span
             class="key">import</span> <span class="nam">DAO</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t6" id="t6">6</a></span><span class="t"><span class="key">from</span> <span
-            class="nam">backend</span><span class="op">.</span><span class="nam">src</span><span
-            class="op">.</span><span class="nam">util</span><span class="op">.</span><span class="nam">validators</span> <span
-            class="key">import</span> <span class="nam">getValidator</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t7" id="t7">7</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
     <p class="run"><span class="n"><a href="#t8" id="t8">8</a></span><span class="t"><span class="str">"""     </span>&nbsp;</span><span
@@ -142,7 +139,7 @@
             class="key">def</span> <span class="nam">sut</span><span class="op">(</span><span class="op">)</span><span
             class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a href="#t36" id="t36">36</a></span><span class="t">    <span class="nam">fabricated_filename</span> <span
-            class="op">=</span> <span class="str">'C:\\Users\\mathi\\Documents\\edutask\\backend\src\static\\validators\\test.json'</span>&nbsp;</span><span
+            class="op">=</span> <span class="str">'C:\\Users\\Mathi\\Documents\\edutask\\backend\src\static\\validators\\test.json'</span>&nbsp;</span><span
             class="r"></span></p>
     <p class="run"><span class="n"><a href="#t37" id="t37">37</a></span><span class="t">    <span class="nam">fabricated_data</span> <span
             class="op">=</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
@@ -268,63 +265,57 @@
             class="op">:</span> <span class="op">[</span><span class="num">1</span><span class="op">,</span> <span
             class="num">2</span><span class="op">,</span> <span class="num">2</span><span class="op">]</span><span
             class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t81" id="t81">81</a></span><span class="t">        <span class="nam">tasks_not_unique_two</span> <span
+    <p class="pln"><span class="n"><a href="#t81" id="t81">81</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t82" id="t82">82</a></span><span class="t">        <span class="nam">tasks_not_unique_two</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'id'</span><span class="op">:</span> <span
             class="str">'625969d956df8080e997398e'</span><span class="op">,</span> <span class="str">'email'</span><span
             class="op">:</span> <span class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">"John"</span><span class="op">,</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t82" id="t82">82</a></span><span class="t">                                <span
+    <p class="pln"><span class="n"><a href="#t83" id="t83">83</a></span><span class="t">                                <span
             class="str">'lastName'</span><span class="op">:</span> <span class="str">'Johnsson'</span><span
             class="op">,</span> <span class="str">'tasks'</span><span class="op">:</span> <span class="op">[</span><span
             class="str">'test'</span><span class="op">,</span> <span class="str">'test'</span><span class="op">,</span> <span
             class="str">'hello'</span><span class="op">]</span><span class="op">}</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t83" id="t83">83</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t84" id="t84">84</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t84" id="t84">84</a></span><span class="t">        <span
-            class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span
-            class="nam">raises</span><span class="op">(</span><span class="nam">Exception</span><span
-            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t85" id="t85">85</a></span><span class="t">            <span class="nam">sut</span><span
-            class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">tasks_not_unique</span><span
-            class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t86" id="t86">86</a></span><span class="t">&nbsp;</span><span
+    <p class="run"><span class="n"><a href="#t85" id="t85">85</a></span><span class="t">        <span class="nam">task_unique</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'id'</span><span class="op">:</span> <span
+            class="str">'625969d956df8080e997398e'</span><span class="op">,</span> <span class="str">'email'</span><span
+            class="op">:</span> <span class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="str">"John"</span><span class="op">,</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t87" id="t87">87</a></span><span class="t">        <span
-            class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span
-            class="nam">raises</span><span class="op">(</span><span class="nam">Exception</span><span
-            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t88" id="t88">88</a></span><span class="t">            <span class="nam">sut</span><span
-            class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">tasks_not_unique_two</span><span
-            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t86" id="t86">86</a></span><span class="t">                       <span
+            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Johnsson'</span><span
+            class="op">,</span> <span class="str">'tasks'</span><span class="op">:</span> <span class="op">[</span><span
+            class="nam">ObjectId</span><span class="op">(</span><span class="str">"6267aca2cdea8eda2f38de81"</span><span
+            class="op">)</span><span class="op">]</span><span class="op">}</span>&nbsp;</span><span class="r"></span>
+    </p>
+    <p class="pln"><span class="n"><a href="#t87" id="t87">87</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t88" id="t88">88</a></span><span class="t">        <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">task_unique</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t89" id="t89">89</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t90" id="t90">90</a></span><span class="t">    <span class="com"># (2) every property complies to the bson data type constraint</span>&nbsp;</span><span
+    <p class="run"><span class="n"><a href="#t90" id="t90">90</a></span><span class="t">        <span
+            class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span
+            class="nam">raises</span><span class="op">(</span><span class="nam">Exception</span><span
+            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t91" id="t91">91</a></span><span class="t">            <span class="nam">sut</span><span
+            class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">tasks_not_unique</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t92" id="t92">92</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t91" id="t91">91</a></span><span class="t">    <span class="key">def</span> <span
-            class="nam">test_firstname_not_comply</span><span class="op">(</span><span class="nam">self</span><span
-            class="op">,</span> <span class="nam">sut</span><span class="op">)</span><span
-            class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t92" id="t92">92</a></span><span class="t">        <span class="nam">invalid_firstname_num</span> <span
-            class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
-            class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
-            class="op">:</span> <span class="num">123</span><span class="op">,</span> <span
-            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
-            class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t93" id="t93">93</a></span><span class="t">        <span class="nam">invalid_firstname_bool</span> <span
-            class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
-            class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
-            class="op">:</span> <span class="key">False</span><span class="op">,</span> <span
-            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
-            class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t94" id="t94">94</a></span><span class="t">        <span class="nam">invalid_firstname_array</span> <span
-            class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
-            class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
-            class="op">:</span> <span class="op">[</span><span class="num">1</span><span class="op">,</span> <span
-            class="num">2</span><span class="op">,</span> <span class="num">3</span><span class="op">]</span><span
-            class="op">,</span> <span class="str">'lastName'</span><span class="op">:</span> <span
-            class="str">'Doe'</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t93" id="t93">93</a></span><span class="t">        <span
+            class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span
+            class="nam">raises</span><span class="op">(</span><span class="nam">Exception</span><span
+            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t94" id="t94">94</a></span><span class="t">            <span class="nam">sut</span><span
+            class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">tasks_not_unique_two</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t95" id="t95">95</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
     <p class="run"><span class="n"><a href="#t96" id="t96">96</a></span><span class="t">        <span
@@ -332,45 +323,81 @@
             class="nam">raises</span><span class="op">(</span><span class="nam">Exception</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a href="#t97" id="t97">97</a></span><span class="t">            <span class="nam">sut</span><span
-            class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">invalid_firstname_num</span><span
-            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+            class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">task_unique</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t98" id="t98">98</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t99" id="t99">99</a></span><span class="t">        <span
-            class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span
-            class="nam">raises</span><span class="op">(</span><span class="nam">Exception</span><span
-            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t100" id="t100">100</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_firstname_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t101" id="t101">101</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t99" id="t99">99</a></span><span class="t">    <span class="com"># (2) every property complies to the bson data type constraint</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t102" id="t102">102</a></span><span class="t">        <span class="key">with</span> <span
+    <p class="run"><span class="n"><a href="#t100" id="t100">100</a></span><span class="t">    <span
+            class="key">def</span> <span class="nam">test_firstname_not_comply</span><span class="op">(</span><span
+            class="nam">self</span><span class="op">,</span> <span class="nam">sut</span><span class="op">)</span><span
+            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t101" id="t101">101</a></span><span class="t">        <span class="nam">invalid_firstname_num</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
+            class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="num">123</span><span class="op">,</span> <span
+            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
+            class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t102" id="t102">102</a></span><span class="t">        <span class="nam">invalid_firstname_bool</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
+            class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="key">False</span><span class="op">,</span> <span
+            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
+            class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t103" id="t103">103</a></span><span class="t">        <span class="nam">invalid_firstname_array</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
+            class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="op">[</span><span class="num">1</span><span class="op">,</span> <span
+            class="num">2</span><span class="op">,</span> <span class="num">3</span><span class="op">]</span><span
+            class="op">,</span> <span class="str">'lastName'</span><span class="op">:</span> <span
+            class="str">'Doe'</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t104" id="t104">104</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t105" id="t105">105</a></span><span class="t">        <span class="key">with</span> <span
             class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
             class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t103" id="t103">103</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t106" id="t106">106</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_firstname_num</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t107" id="t107">107</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t108" id="t108">108</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t109" id="t109">109</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_firstname_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t110" id="t110">110</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t111" id="t111">111</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t112" id="t112">112</a></span><span class="t">            <span
             class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
             class="nam">invalid_firstname_array</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t104" id="t104">104</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t113" id="t113">113</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t105" id="t105">105</a></span><span class="t">    <span
+    <p class="run"><span class="n"><a href="#t114" id="t114">114</a></span><span class="t">    <span
             class="key">def</span> <span class="nam">test_lastname_not_comply</span><span class="op">(</span><span
             class="nam">self</span><span class="op">,</span> <span class="nam">sut</span><span class="op">)</span><span
             class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t106" id="t106">106</a></span><span class="t">        <span class="nam">invalid_lastname_num</span> <span
+    <p class="run"><span class="n"><a href="#t115" id="t115">115</a></span><span class="t">        <span class="nam">invalid_lastname_num</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">,</span> <span
             class="str">'lastName'</span><span class="op">:</span> <span class="num">123</span><span class="op">}</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t107" id="t107">107</a></span><span class="t">        <span class="nam">invalid_lastname_bool</span> <span
+    <p class="run"><span class="n"><a href="#t116" id="t116">116</a></span><span class="t">        <span class="nam">invalid_lastname_bool</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">,</span> <span
             class="str">'lastName'</span><span class="op">:</span> <span class="key">True</span><span
             class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t108" id="t108">108</a></span><span class="t">        <span class="nam">invalid_lastname_array</span> <span
+    <p class="run"><span class="n"><a href="#t117" id="t117">117</a></span><span class="t">        <span class="nam">invalid_lastname_array</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">,</span> <span
@@ -378,171 +405,227 @@
             class="num">1</span><span class="op">,</span> <span class="num">2</span><span class="op">,</span> <span
             class="num">3</span><span class="op">]</span><span class="op">}</span>&nbsp;</span><span class="r"></span>
     </p>
-    <p class="pln"><span class="n"><a href="#t109" id="t109">109</a></span><span class="t">&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t110" id="t110">110</a></span><span class="t">        <span class="key">with</span> <span
-            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
-            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t111" id="t111">111</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_lastname_num</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t112" id="t112">112</a></span><span class="t">&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t113" id="t113">113</a></span><span class="t">        <span class="key">with</span> <span
-            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
-            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t114" id="t114">114</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_lastname_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t115" id="t115">115</a></span><span class="t">&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t116" id="t116">116</a></span><span class="t">        <span class="key">with</span> <span
-            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
-            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t117" id="t117">117</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_lastname_array</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t118" id="t118">118</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t119" id="t119">119</a></span><span class="t">    <span
+    <p class="run"><span class="n"><a href="#t119" id="t119">119</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t120" id="t120">120</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_lastname_num</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t121" id="t121">121</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t122" id="t122">122</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t123" id="t123">123</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_lastname_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t124" id="t124">124</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t125" id="t125">125</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t126" id="t126">126</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_lastname_array</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t127" id="t127">127</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t128" id="t128">128</a></span><span class="t">    <span
             class="key">def</span> <span class="nam">test_email_not_comply</span><span class="op">(</span><span
             class="nam">self</span><span class="op">,</span> <span class="nam">sut</span><span class="op">)</span><span
             class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t120" id="t120">120</a></span><span class="t">        <span class="nam">invalid_email_num</span> <span
+    <p class="run"><span class="n"><a href="#t129" id="t129">129</a></span><span class="t">        <span class="nam">invalid_email_num</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="num">123</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">,</span> <span
             class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
             class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t121" id="t121">121</a></span><span class="t">        <span class="nam">invalid_email_bool</span> <span
+    <p class="run"><span class="n"><a href="#t130" id="t130">130</a></span><span class="t">        <span class="nam">invalid_email_bool</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="key">False</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">,</span> <span
             class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
             class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t122" id="t122">122</a></span><span class="t">        <span class="nam">invalid_email_array</span> <span
+    <p class="run"><span class="n"><a href="#t131" id="t131">131</a></span><span class="t">        <span class="nam">invalid_email_array</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="op">[</span><span class="num">1</span><span class="op">,</span> <span class="num">2</span><span
             class="op">,</span> <span class="num">3</span><span class="op">]</span><span class="op">,</span> <span
             class="str">'firstName'</span><span class="op">:</span> <span class="str">'Jane'</span><span
             class="op">,</span> <span class="str">'lastName'</span><span class="op">:</span> <span
             class="str">'Doe'</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t123" id="t123">123</a></span><span class="t">&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t124" id="t124">124</a></span><span class="t">        <span class="key">with</span> <span
-            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
-            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t125" id="t125">125</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_email_num</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t126" id="t126">126</a></span><span class="t">&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t127" id="t127">127</a></span><span class="t">        <span class="key">with</span> <span
-            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
-            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t128" id="t128">128</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_email_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t129" id="t129">129</a></span><span class="t">&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t130" id="t130">130</a></span><span class="t">        <span class="key">with</span> <span
-            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
-            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t131" id="t131">131</a></span><span class="t">            <span
-            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
-            class="nam">invalid_email_array</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t132" id="t132">132</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t133" id="t133">133</a></span><span class="t">    <span
+    <p class="run"><span class="n"><a href="#t133" id="t133">133</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t134" id="t134">134</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_email_num</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t135" id="t135">135</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t136" id="t136">136</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t137" id="t137">137</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_email_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t138" id="t138">138</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t139" id="t139">139</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t140" id="t140">140</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">invalid_email_array</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t141" id="t141">141</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t142" id="t142">142</a></span><span class="t">    <span
             class="key">def</span> <span class="nam">test_tasks_not_comply</span><span class="op">(</span><span
             class="nam">self</span><span class="op">,</span> <span class="nam">sut</span><span class="op">)</span><span
             class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t134" id="t134">134</a></span><span class="t">        <span class="key">pass</span>&nbsp;</span><span
+    <p class="run"><span class="n"><a href="#t143" id="t143">143</a></span><span class="t">        <span class="nam">tasks_not_unique_num</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'id'</span><span class="op">:</span> <span
+            class="str">'625969d956df8080e997398e'</span><span class="op">,</span> <span class="str">'email'</span><span
+            class="op">:</span> <span class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="str">"John"</span><span class="op">,</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t135" id="t135">135</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t144" id="t144">144</a></span><span class="t">                                <span
+            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Johnsson'</span><span
+            class="op">,</span> <span class="str">'tasks'</span><span class="op">:</span> <span class="num">12334</span><span
+            class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t145" id="t145">145</a></span><span class="t">        <span class="nam">tasks_not_unique_bool</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'id'</span><span class="op">:</span> <span
+            class="str">'625969d956df8080e997398e'</span><span class="op">,</span> <span class="str">'email'</span><span
+            class="op">:</span> <span class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="str">"John"</span><span class="op">,</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t136" id="t136">136</a></span><span class="t">    <span class="com"># (1) the data for the new object contains all required properties</span>&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t146" id="t146">146</a></span><span class="t">                                 <span
+            class="str">'lastName'</span><span class="op">:</span> <span class="str">'Johnsson'</span><span
+            class="op">,</span> <span class="str">'tasks'</span><span class="op">:</span> <span
+            class="key">True</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t147" id="t147">147</a></span><span class="t">        <span class="nam">tasks_not_string</span> <span
+            class="op">=</span> <span class="op">{</span><span class="str">'id'</span><span class="op">:</span> <span
+            class="str">'625969d956df8080e997398e'</span><span class="op">,</span> <span class="str">'email'</span><span
+            class="op">:</span> <span class="str">"john.doe@test.com"</span><span class="op">,</span> <span class="str">'firstName'</span><span
+            class="op">:</span> <span class="str">"John"</span><span class="op">,</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t137" id="t137">137</a></span><span class="t">    <span
+    <p class="pln"><span class="n"><a href="#t148" id="t148">148</a></span><span
+            class="t">                            <span class="str">'lastName'</span><span class="op">:</span> <span
+            class="str">'Johnsson'</span><span class="op">,</span> <span class="str">'tasks'</span><span
+            class="op">:</span> <span class="str">"test"</span><span class="op">}</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t149" id="t149">149</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t150" id="t150">150</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t151" id="t151">151</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">tasks_not_unique_num</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t152" id="t152">152</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t153" id="t153">153</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t154" id="t154">154</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">tasks_not_unique_bool</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t155" id="t155">155</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t156" id="t156">156</a></span><span class="t">        <span class="key">with</span> <span
+            class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
+            class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t157" id="t157">157</a></span><span class="t">            <span
+            class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
+            class="nam">tasks_not_string</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t158" id="t158">158</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t159" id="t159">159</a></span><span class="t">    <span class="com"># (1) the data for the new object contains all required properties</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t160" id="t160">160</a></span><span class="t">    <span
             class="key">def</span> <span class="nam">test_does_not_have_all_required_properties</span><span
             class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">sut</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t138" id="t138">138</a></span><span class="t">        <span class="nam">no_lastname</span> <span
+    <p class="run"><span class="n"><a href="#t161" id="t161">161</a></span><span class="t">        <span class="nam">no_lastname</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="str">'test@test.com'</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">}</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t139" id="t139">139</a></span><span class="t">        <span class="nam">no_firstname</span> <span
+    <p class="run"><span class="n"><a href="#t162" id="t162">162</a></span><span class="t">        <span class="nam">no_firstname</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="str">'test@test.com'</span><span class="op">,</span> <span class="str">'lastName'</span><span
             class="op">:</span> <span class="str">'Doe'</span><span class="op">}</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t140" id="t140">140</a></span><span class="t">        <span class="nam">no_email</span> <span
+    <p class="run"><span class="n"><a href="#t163" id="t163">163</a></span><span class="t">        <span class="nam">no_email</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Jane'</span><span class="op">,</span> <span
             class="str">'lastName'</span><span class="op">:</span> <span class="str">'Doe'</span><span
             class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t141" id="t141">141</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t164" id="t164">164</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t142" id="t142">142</a></span><span class="t">        <span class="key">with</span> <span
+    <p class="run"><span class="n"><a href="#t165" id="t165">165</a></span><span class="t">        <span class="key">with</span> <span
             class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
             class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t143" id="t143">143</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t166" id="t166">166</a></span><span class="t">            <span
             class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
             class="nam">no_lastname</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t144" id="t144">144</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t167" id="t167">167</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t145" id="t145">145</a></span><span class="t">        <span class="key">with</span> <span
+    <p class="run"><span class="n"><a href="#t168" id="t168">168</a></span><span class="t">        <span class="key">with</span> <span
             class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
             class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t146" id="t146">146</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t169" id="t169">169</a></span><span class="t">            <span
             class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
             class="nam">no_firstname</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t147" id="t147">147</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t170" id="t170">170</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t148" id="t148">148</a></span><span class="t">        <span class="key">with</span> <span
+    <p class="run"><span class="n"><a href="#t171" id="t171">171</a></span><span class="t">        <span class="key">with</span> <span
             class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span
             class="op">(</span><span class="nam">Exception</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t149" id="t149">149</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t172" id="t172">172</a></span><span class="t">            <span
             class="nam">sut</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span
             class="nam">no_email</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t150" id="t150">150</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t173" id="t173">173</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t151" id="t151">151</a></span><span class="t">    <span class="com"># Returns object, all 1-3 conditions are good.</span>&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t174" id="t174">174</a></span><span class="t">    <span class="com"># Returns object, all 1 &amp; 2 conditions are good.</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t152" id="t152">152</a></span><span class="t">    <span
-            class="key">def</span> <span class="nam">test_data_string_uniqueItems_true_all_props_true</span><span
+    <p class="run"><span class="n"><a href="#t175" id="t175">175</a></span><span class="t">    <span
+            class="key">def</span> <span class="nam">test_have_all_required_properties</span><span
             class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">sut</span><span
             class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t153" id="t153">153</a></span><span class="t">        <span class="nam">user_data</span> <span
+    <p class="run"><span class="n"><a href="#t176" id="t176">176</a></span><span class="t">        <span class="nam">user_data</span> <span
             class="op">=</span> <span class="op">{</span><span class="str">'email'</span><span class="op">:</span> <span
             class="str">'lbg@telia.com'</span><span class="op">,</span> <span class="str">'firstName'</span><span
             class="op">:</span> <span class="str">'Linnea'</span><span class="op">,</span> <span
             class="str">'lastName'</span><span class="op">:</span> <span class="str">'B'</span><span class="op">}</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t154" id="t154">154</a></span><span class="t">        <span class="nam">user</span> <span
+    <p class="run"><span class="n"><a href="#t177" id="t177">177</a></span><span class="t">        <span class="nam">user</span> <span
             class="op">=</span> <span class="nam">sut</span><span class="op">.</span><span
             class="nam">create</span><span class="op">(</span><span class="nam">user_data</span><span
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a href="#t155" id="t155">155</a></span><span class="t">&nbsp;</span><span
+    <p class="pln"><span class="n"><a href="#t178" id="t178">178</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t156" id="t156">156</a></span><span class="t">        <span class="key">assert</span> <span
+    <p class="run"><span class="n"><a href="#t179" id="t179">179</a></span><span class="t">        <span class="key">assert</span> <span
             class="nam">sut</span><span class="op">.</span><span class="nam">findOne</span><span
             class="op">(</span><span class="nam">user</span><span class="op">[</span><span class="str">'_id'</span><span
             class="op">]</span><span class="op">[</span><span class="str">'$oid'</span><span class="op">]</span><span
             class="op">)</span><span class="op">[</span><span class="str">'email'</span><span class="op">]</span> <span
             class="op">==</span> <span class="nam">user_data</span><span class="op">[</span><span
             class="str">'email'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t157" id="t157">157</a></span><span class="t">        <span class="key">assert</span> <span
+    <p class="run"><span class="n"><a href="#t180" id="t180">180</a></span><span class="t">        <span class="key">assert</span> <span
             class="nam">sut</span><span class="op">.</span><span class="nam">findOne</span><span
             class="op">(</span><span class="nam">user</span><span class="op">[</span><span class="str">'_id'</span><span
             class="op">]</span><span class="op">[</span><span class="str">'$oid'</span><span class="op">]</span><span
@@ -550,7 +633,7 @@
             class="op">]</span> <span class="op">==</span> <span class="nam">user_data</span><span
             class="op">[</span><span class="str">'firstName'</span><span class="op">]</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="run"><span class="n"><a href="#t158" id="t158">158</a></span><span class="t">        <span class="key">assert</span> <span
+    <p class="run"><span class="n"><a href="#t181" id="t181">181</a></span><span class="t">        <span class="key">assert</span> <span
             class="nam">sut</span><span class="op">.</span><span class="nam">findOne</span><span
             class="op">(</span><span class="nam">user</span><span class="op">[</span><span class="str">'_id'</span><span
             class="op">]</span><span class="op">[</span><span class="str">'$oid'</span><span class="op">]</span><span
@@ -565,7 +648,7 @@
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav"
                                                                                href="https://coverage.readthedocs.io">coverage.py
             v6.3.2</a>,
-            created at 2022-04-25 16:50 +0200
+            created at 2022-04-26 10:32 +0200
         </p>
     </div>
 </footer>
