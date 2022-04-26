@@ -5,7 +5,7 @@
     <meta content="IE=emulateIE7" http-equiv="X-UA-Compatible"/>
     <title>Coverage for
         C:\Users\mathi\AppData\Local\JetBrains\Toolbox\apps\PyCharm-P\ch-0\221.5080.212\plugins\python\helpers\pycharm\teamcity\pytest_plugin.py:
-        39%</title>
+        48%</title>
     <link href="favicon_32.png" rel="icon" sizes="32x32">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script defer src="coverage_html.js" type="text/javascript"></script>
@@ -15,7 +15,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>C:\Users\mathi\AppData\Local\JetBrains\Toolbox\apps\PyCharm-P\ch-0\221.5080.212\plugins\python\helpers\pycharm\teamcity\pytest_plugin.py</b>:
-            <span class="pc_cov">39%</span>
+            <span class="pc_cov">48%</span>
         </h1>
         <div id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -48,13 +48,13 @@
         <h2>
             <span class="text">294 statements &nbsp;</span>
             <button class="run button_toggle_run" data-shortcut="r" title="Toggle lines run" type="button" value="run">
-                130<span class="text"> run</span></button>
+                155<span class="text"> run</span></button>
             <button class="mis show_mis button_toggle_mis" data-shortcut="m" title="Toggle lines missing" type="button"
-                    value="mis">164<span class="text"> missing</span></button>
+                    value="mis">139<span class="text"> missing</span></button>
             <button class="exc show_exc button_toggle_exc" data-shortcut="x" title="Toggle lines excluded" type="button"
                     value="exc">0<span class="text"> excluded</span></button>
             <button class="par run show_par button_toggle_par" data-shortcut="p" title="Toggle lines partially run"
-                    type="button" value="par">20<span class="text"> partial</span></button>
+                    type="button" value="par">29<span class="text"> partial</span></button>
         </h2>
         <div style="display: none;">
             <button class="button_next_chunk" data-shortcut="j" type="button">Next highlighted chunk</button>
@@ -611,14 +611,15 @@
             class="key">def</span> <span class="nam">format_location</span><span class="op">(</span><span class="nam">self</span><span
             class="op">,</span> <span class="nam">location</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t160" id="t160">160</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t160" id="t160">160</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">type</span><span class="op">(</span><span
             class="nam">location</span><span class="op">)</span> <span class="key">is</span> <span
             class="nam">tuple</span> <span class="key">and</span> <span class="nam">len</span><span
             class="op">(</span><span class="nam">location</span><span class="op">)</span> <span
-            class="op">==</span> <span class="num">3</span><span class="op">:</span>&nbsp;</span><span class="r"></span>
+            class="op">==</span> <span class="num">3</span><span class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">160&#x202F;&#x219B;&#x202F;162</span><span class="annotate long">line 160 didn't jump to line 162, because the condition on line 160 was never false</span></span>
     </p>
-    <p class="mis show_mis"><span class="n"><a href="#t161" id="t161">161</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t161" id="t161">161</a></span><span class="t">            <span
             class="key">return</span> <span class="str">"%s:%s (%s)"</span> <span class="op">%</span> <span
             class="op">(</span><span class="nam">str</span><span class="op">(</span><span
             class="nam">location</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span
@@ -834,11 +835,13 @@
             class="op">,</span> <span class="nam">report_output</span><span class="op">=</span><span
             class="key">True</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t215" id="t215">215</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t215" id="t215">215</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">hasattr</span><span class="op">(</span><span
             class="nam">report</span><span class="op">,</span> <span class="str">'duration'</span><span
-            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t216" id="t216">216</a></span><span class="t">            <span
+            class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">215&#x202F;&#x219B;&#x202F;218</span><span
+            class="annotate long">line 215 didn't jump to line 218, because the condition on line 215 was never false</span></span>
+    </p>
+    <p class="run"><span class="n"><a href="#t216" id="t216">216</a></span><span class="t">            <span
             class="nam">duration</span> <span class="op">=</span> <span class="nam">timedelta</span><span
             class="op">(</span><span class="nam">seconds</span><span class="op">=</span><span
             class="nam">report</span><span class="op">.</span><span class="nam">duration</span><span class="op">)</span>&nbsp;</span><span
@@ -850,49 +853,52 @@
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t219" id="t219">219</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t220" id="t220">220</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t220" id="t220">220</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">message</span> <span class="key">is</span> <span
-            class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t221" id="t221">221</a></span><span class="t">            <span
+            class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">220&#x202F;&#x219B;&#x202F;223</span><span
+            class="annotate long">line 220 didn't jump to line 223, because the condition on line 220 was never false</span></span>
+    </p>
+    <p class="run"><span class="n"><a href="#t221" id="t221">221</a></span><span class="t">            <span
             class="nam">message</span> <span class="op">=</span> <span class="nam">self</span><span
             class="op">.</span><span class="nam">format_location</span><span class="op">(</span><span
             class="nam">report</span><span class="op">.</span><span class="nam">location</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t222" id="t222">222</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t223" id="t223">223</a></span><span class="t">        <span
-            class="nam">self</span><span class="op">.</span><span class="nam">ensure_test_start_reported</span><span
-            class="op">(</span><span class="nam">test_id</span><span class="op">)</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t224" id="t224">224</a></span><span class="t">        <span
+    <p class="run"><span class="n"><a href="#t223" id="t223">223</a></span><span class="t">        <span class="nam">self</span><span
+            class="op">.</span><span class="nam">ensure_test_start_reported</span><span class="op">(</span><span
+            class="nam">test_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t224" id="t224">224</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">report_output</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t225" id="t225">225</a></span><span class="t">            <span
+            class="r"><span class="annotate short">224&#x202F;&#x219B;&#x202F;227</span><span class="annotate long">line 224 didn't jump to line 227, because the condition on line 224 was never false</span></span>
+    </p>
+    <p class="run"><span class="n"><a href="#t225" id="t225">225</a></span><span class="t">            <span
             class="nam">self</span><span class="op">.</span><span class="nam">report_test_output</span><span class="op">(</span><span
             class="nam">report</span><span class="op">,</span> <span class="nam">test_id</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t226" id="t226">226</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t227" id="t227">227</a></span><span class="t">        <span
-            class="nam">diff_error</span> <span class="op">=</span> <span class="key">None</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t228" id="t228">228</a></span><span class="t">        <span
+    <p class="run"><span class="n"><a href="#t227" id="t227">227</a></span><span class="t">        <span class="nam">diff_error</span> <span
+            class="op">=</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t228" id="t228">228</a></span><span class="t">        <span
             class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t229" id="t229">229</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t229" id="t229">229</a></span><span class="t">            <span
             class="nam">err_message</span> <span class="op">=</span> <span class="nam">str</span><span
             class="op">(</span><span class="nam">report</span><span class="op">.</span><span class="nam">longrepr</span><span
             class="op">.</span><span class="nam">reprcrash</span><span class="op">.</span><span
             class="nam">message</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t230" id="t230">230</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t230" id="t230">230</a></span><span class="t">            <span
             class="nam">diff_name</span> <span class="op">=</span> <span class="nam">diff_tools</span><span
             class="op">.</span><span class="nam">EqualsAssertionError</span><span class="op">.</span><span class="nam">__name__</span>&nbsp;</span><span
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t231" id="t231">231</a></span><span class="t">            <span
             class="com"># There is a string like "foo.bar.DiffError: [serialized_data]"</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t232" id="t232">232</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">diff_name</span> <span class="key">in</span> <span class="nam">err_message</span><span
-            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t232" id="t232">232</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">diff_name</span> <span
+            class="key">in</span> <span class="nam">err_message</span><span class="op">:</span>&nbsp;</span><span
+            class="r"><span class="annotate short">232&#x202F;&#x219B;&#x202F;233</span><span class="annotate long">line 232 didn't jump to line 233, because the condition on line 232 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t233" id="t233">233</a></span><span
             class="t">                <span class="nam">serialized_data</span> <span class="op">=</span> <span
             class="nam">err_message</span><span class="op">[</span><span class="nam">err_message</span><span class="op">.</span><span
@@ -907,15 +913,17 @@
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t235" id="t235">235</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t236" id="t236">236</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t236" id="t236">236</a></span><span class="t">            <span
             class="nam">assertion_tuple</span> <span class="op">=</span> <span class="nam">getattr</span><span
             class="op">(</span><span class="nam">self</span><span class="op">.</span><span
             class="nam">current_test_item</span><span class="op">,</span> <span
             class="nam">_ASSERTION_FAILURE_KEY</span><span class="op">,</span> <span class="key">None</span><span
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t237" id="t237">237</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">assertion_tuple</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+    <p class="par run show_par"><span class="n"><a href="#t237" id="t237">237</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">assertion_tuple</span><span
+            class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">237&#x202F;&#x219B;&#x202F;238</span><span class="annotate long">line 237 didn't jump to line 238, because the condition on line 237 was never true</span></span>
+    </p>
     <p class="mis show_mis"><span class="n"><a href="#t238" id="t238">238</a></span><span
             class="t">                <span class="nam">op</span><span class="op">,</span> <span class="nam">left</span><span
             class="op">,</span> <span class="nam">right</span> <span class="op">=</span> <span class="nam">assertion_tuple</span>&nbsp;</span><span
@@ -940,20 +948,23 @@
             class="key">pass</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t244" id="t244">244</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t245" id="t245">245</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t245" id="t245">245</a></span><span class="t">        <span
             class="key">if</span> <span class="key">not</span> <span class="nam">diff_error</span><span
-            class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t246" id="t246">246</a></span><span class="t">            <span
+            class="op">:</span>&nbsp;</span><span class="r"><span
+            class="annotate short">245&#x202F;&#x219B;&#x202F;249</span><span class="annotate long">line 245 didn't jump to line 249, because the condition on line 245 was never false</span></span>
+    </p>
+    <p class="run"><span class="n"><a href="#t246" id="t246">246</a></span><span class="t">            <span
             class="key">from</span> <span class="op">.</span><span class="nam">jb_local_exc_store</span> <span
             class="key">import</span> <span class="nam">get_exception</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t247" id="t247">247</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t247" id="t247">247</a></span><span class="t">            <span
             class="nam">diff_error</span> <span class="op">=</span> <span class="nam">get_exception</span><span
             class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t248" id="t248">248</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t249" id="t249">249</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t249" id="t249">249</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">diff_error</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
+            class="r"><span class="annotate short">249&#x202F;&#x219B;&#x202F;251</span><span class="annotate long">line 249 didn't jump to line 251, because the condition on line 249 was never true</span></span>
+    </p>
     <p class="pln"><span class="n"><a href="#t250" id="t250">250</a></span><span class="t">            <span
             class="com"># Cut everything after postfix: it is internal view of DiffError</span>&nbsp;</span><span
             class="r"></span></p>
@@ -1010,7 +1021,7 @@
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t264" id="t264">264</a></span><span class="t">        <span class="key">else</span><span
             class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t265" id="t265">265</a></span><span class="t">            <span
+    <p class="run"><span class="n"><a href="#t265" id="t265">265</a></span><span class="t">            <span
             class="nam">self</span><span class="op">.</span><span class="nam">teamcity</span><span
             class="op">.</span><span class="nam">testFailed</span><span class="op">(</span><span
             class="nam">test_id</span><span class="op">,</span> <span class="nam">message</span><span
@@ -1018,10 +1029,10 @@
             class="nam">report</span><span class="op">.</span><span class="nam">longrepr</span><span class="op">)</span><span
             class="op">,</span> <span class="nam">flowId</span><span class="op">=</span><span class="nam">test_id</span><span
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t266" id="t266">266</a></span><span class="t">        <span
-            class="nam">self</span><span class="op">.</span><span class="nam">report_test_finished</span><span
-            class="op">(</span><span class="nam">test_id</span><span class="op">,</span> <span
-            class="nam">duration</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a href="#t266" id="t266">266</a></span><span class="t">        <span class="nam">self</span><span
+            class="op">.</span><span class="nam">report_test_finished</span><span class="op">(</span><span class="nam">test_id</span><span
+            class="op">,</span> <span class="nam">duration</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t267" id="t267">267</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
     <p class="run"><span class="n"><a href="#t268" id="t268">268</a></span><span class="t">    <span
@@ -1123,11 +1134,9 @@
             class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t294" id="t294">294</a></span><span class="t">&nbsp;</span><span
             class="r"></span></p>
-    <p class="par run show_par"><span class="n"><a href="#t295" id="t295">295</a></span><span class="t">        <span
+    <p class="run"><span class="n"><a href="#t295" id="t295">295</a></span><span class="t">        <span
             class="key">if</span> <span class="nam">report</span><span class="op">.</span><span
-            class="nam">passed</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">295&#x202F;&#x219B;&#x202F;308</span><span
-            class="annotate long">line 295 didn't jump to line 308, because the condition on line 295 was never false</span></span>
-    </p>
+            class="nam">passed</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a href="#t296" id="t296">296</a></span><span class="t">            <span
             class="com"># Do not report passed setup/teardown if no output</span>&nbsp;</span><span class="r"></span>
     </p>
@@ -1180,15 +1189,19 @@
             class="nam">block_name</span><span class="op">,</span> <span class="nam">flowId</span><span
             class="op">=</span><span class="nam">test_id</span><span class="op">)</span>&nbsp;</span><span
             class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t308" id="t308">308</a></span><span class="t">        <span
+    <p class="par run show_par"><span class="n"><a href="#t308" id="t308">308</a></span><span class="t">        <span
             class="key">elif</span> <span class="nam">report</span><span class="op">.</span><span
-            class="nam">failed</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t309" id="t309">309</a></span><span class="t">            <span
-            class="key">if</span> <span class="nam">report</span><span class="op">.</span><span class="nam">when</span> <span
-            class="op">==</span> <span class="str">'call'</span><span class="op">:</span>&nbsp;</span><span
-            class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a href="#t310" id="t310">310</a></span><span
-            class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">report_test_failure</span><span
+            class="nam">failed</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">308&#x202F;&#x219B;&#x202F;321</span><span
+            class="annotate long">line 308 didn't jump to line 321, because the condition on line 308 was never false</span></span>
+    </p>
+    <p class="par run show_par"><span class="n"><a href="#t309" id="t309">309</a></span><span
+            class="t">            <span class="key">if</span> <span class="nam">report</span><span
+            class="op">.</span><span class="nam">when</span> <span class="op">==</span> <span
+            class="str">'call'</span><span class="op">:</span>&nbsp;</span><span class="r"><span class="annotate short">309&#x202F;&#x219B;&#x202F;311</span><span
+            class="annotate long">line 309 didn't jump to line 311, because the condition on line 309 was never false</span></span>
+    </p>
+    <p class="run"><span class="n"><a href="#t310" id="t310">310</a></span><span class="t">                <span
+            class="nam">self</span><span class="op">.</span><span class="nam">report_test_failure</span><span
             class="op">(</span><span class="nam">test_id</span><span class="op">,</span> <span class="nam">report</span><span
             class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a href="#t311" id="t311">311</a></span><span class="t">            <span
@@ -1631,7 +1644,7 @@
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav"
                                                                                href="https://coverage.readthedocs.io">coverage.py
             v6.3.2</a>,
-            created at 2022-04-25 16:50 +0200
+            created at 2022-04-26 10:32 +0200
         </p>
     </div>
 </footer>

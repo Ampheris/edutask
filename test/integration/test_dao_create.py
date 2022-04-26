@@ -1,9 +1,9 @@
 import json
 import os
-from unittest.mock import patch, MagicMock
 import pytest
+from bson import ObjectId
+
 from backend.src.util.dao import DAO
-from backend.src.util.validators import getValidator
 
 """     
 Creates a new document in the collection associated to this data access object. The creation of a new
@@ -33,7 +33,7 @@ In particular, the validator has to make sure that:
 
 @pytest.fixture
 def sut():
-    fabricated_filename = 'C:\\Users\\Stina\\PycharmProjects\\edutask\\backend\src\static\\validators\\test.json'
+    fabricated_filename = 'C:\\Users\\Mathi\\Documents\\edutask\\backend\src\static\\validators\\test.json'
     fabricated_data = {
         "$jsonSchema": {
             "bsonType": "object",
@@ -77,34 +77,21 @@ class TestDaoCreate:
     def test_string_uniqueItem_false(self, sut):
         # uniqueItem is for the tasks only since its the only array in the list.
         tasks_not_unique = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
-                            'lastName': 'Johnsson', 'tasks': [1, 2, 2]}
+                            'lastName': 'Johnsson',
+                            'tasks': [ObjectId("6267aca2cdea8eda2f38de81"), ObjectId("6267aca2cdea8eda2f38de81")]}
 
-        tasks_not_unique_two = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
-                                'lastName': 'Johnsson', 'tasks': ['test', 'test', 'hello']}
+        task_unique = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                       'lastName': 'Johnsson', 'tasks': [ObjectId("6267aca2cdea8eda2f38de81")]}
 
-        tasks_not_unique_three = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
-                                  'lastName': 'Johnsson', 'tasks': ["test", "hello", "hello"]}
-
-        tasks_not_unique_bool = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
-                                 'lastName': 'Johnsson', 'tasks': [True]}
-
-        tasks_not_array = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
-                           'lastName': 'Johnsson', 'tasks': "test"}
+        sut.create(task_unique)
 
         with pytest.raises(Exception):
             sut.create(tasks_not_unique)
 
+        # Fails, does not check that properties with the flag 'uniqueItems' are unique
+        # among all documents of the collection.
         with pytest.raises(Exception):
-            sut.create(tasks_not_unique_two)
-
-        with pytest.raises(Exception):
-            sut.create(tasks_not_unique_three)
-
-        with pytest.raises(Exception):
-            sut.create(tasks_not_unique_bool)
-
-        with pytest.raises(Exception):
-            sut.create(tasks_not_array)
+            sut.create(task_unique)
 
     # (2) every property complies to the bson data type constraint
     def test_firstname_not_comply(self, sut):
@@ -150,7 +137,21 @@ class TestDaoCreate:
             sut.create(invalid_email_array)
 
     def test_tasks_not_comply(self, sut):
-        pass
+        tasks_not_unique_num = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                                'lastName': 'Johnsson', 'tasks': 12334}
+        tasks_not_unique_bool = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                                 'lastName': 'Johnsson', 'tasks': True}
+        tasks_not_string = {'id': '625969d956df8080e997398e', 'email': "john.doe@test.com", 'firstName': "John",
+                            'lastName': 'Johnsson', 'tasks': "test"}
+
+        with pytest.raises(Exception):
+            sut.create(tasks_not_unique_num)
+
+        with pytest.raises(Exception):
+            sut.create(tasks_not_unique_bool)
+
+        with pytest.raises(Exception):
+            sut.create(tasks_not_string)
 
     # (1) the data for the new object contains all required properties
     def test_does_not_have_all_required_properties(self, sut):
@@ -167,9 +168,18 @@ class TestDaoCreate:
         with pytest.raises(Exception):
             sut.create(no_email)
 
-    # Returns object, all 1-3 conditions are good.
-    def test_data_string_uniqueItems_true_all_props_true(self, sut):
+    # Returns object, all 1 & 2 conditions are good.
+    def test_have_all_required_properties(self, sut):
         user_data = {'email': 'lbg@telia.com', 'firstName': 'Linnea', 'lastName': 'B'}
+        user = sut.create(user_data)
+
+        assert sut.findOne(user['_id']['$oid'])['email'] == user_data['email']
+        assert sut.findOne(user['_id']['$oid'])['firstName'] == user_data['firstName']
+        assert sut.findOne(user['_id']['$oid'])['lastName'] == user_data['lastName']
+
+    def test_have_all_required_properties_uniqueItems(self, sut):
+        user_data = {'email': "john.doe@test.com", 'firstName': "John", 'lastName': 'Johnsson',
+                     'tasks': [ObjectId("6267aca2cdea8eda2f38de81")]}
         user = sut.create(user_data)
 
         assert sut.findOne(user['_id']['$oid'])['email'] == user_data['email']
