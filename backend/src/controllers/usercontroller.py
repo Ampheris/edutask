@@ -2,7 +2,6 @@ import re
 from backend.src.controllers.controller import Controller
 from backend.src.util.dao import DAO
 
-
 emailValidator = re.compile(r'.*@.*')
 
 

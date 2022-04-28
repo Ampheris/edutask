@@ -2,6 +2,7 @@ from unittest.mock import MagicMock, patch, call
 import pytest
 from backend.src.controllers.usercontroller import UserController
 
+
 class TestGetUserByEmail:
     def test_valid_email_one_user_exist(self):
         fake_dao = MagicMock()
@@ -53,3 +54,4 @@ class TestGetUserByEmail:
         # not <local-part>@<domain>.<host>
         with pytest.raises(ValueError):
             uc.get_user_by_email(email=invalid_email2)
+
