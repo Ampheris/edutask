@@ -33,7 +33,7 @@ function setUp() {
     cy.visit('http://localhost:3000/')
 }
 
-function login() {
+function loginAndOpenTask() {
     cy.get('h1').should('contain.text', 'Login')
 
     cy.contains('div', 'Email Address').find('input')
@@ -46,7 +46,7 @@ function login() {
     cy.get('h1')
         .should("contain.text", 'Your tasks, Mathilda Holmström')
 
-    cy.wait(5000)
+    cy.get(".container-element a").click()
 }
 
 function tearDown() {
@@ -62,13 +62,15 @@ function tearDown() {
 describe('User enters a new tasks description', () => {
     before(() => {
         setUp()
-        login()
+        loginAndOpenTask()
     })
 
     after(() => {
         tearDown()
     })
 
+    it('should open up the test task', function () {
 
+    });
 
 })
