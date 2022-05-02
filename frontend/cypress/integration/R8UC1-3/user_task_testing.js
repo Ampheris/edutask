@@ -83,6 +83,10 @@ describe('Users task testing', () => {
             .should("contain.value", 'Test description')
     });
 
+    it('should allow the user to create new todo item is at the bottom of the list', () => {
+        // Check if the item is at the bottom of the list
+    });
+
     it('should NOT allow the user to create new todo item when description is empty', () => {
         // Check so that the length is the same/expected value
     });
