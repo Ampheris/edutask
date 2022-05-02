@@ -69,9 +69,42 @@ describe('Users task testing', () => {
         tearDown()
     })
 
-    it('should allow user to type in a description', function () {
+    it('should allow user to type in a description', () => {
         cy.get('.inline-form').find('input[type=text]').type('Test description')
             .should("contain.value", 'Test description')
     });
+
+    it('should allow the user to create new todo item when description is not empty', () => {
+        // Check length of the list is +1 after form is submitted
+    });
+
+    it('should NOT allow the user to create new todo item when description is empty', () => {
+        // Check so that the length is the same/expected value
+    });
+
+    it('should make the todo item border red if its set to done', () => {
+        // Check after a red border
+    });
+
+    it('should set active task to done if clicked', () => {
+        // Check that the task is set to done
+    });
+
+    it('should done task should have its text struck through', () => {
+        // Check that the tasks text is struck through
+    });
+
+    it('should set done task to active if clicked', () => {
+        // Check so that the task is set to active
+    });
+
+    it('should remove the struck through text after task is set to active from done', () => {
+        // Check if text is not struck through
+    });
+
+    it('should remove todo from list if task is deleted', () => {
+        // Check that the length of the list is -1 or the expected value.
+    });
+
 
 })
