@@ -1,6 +1,4 @@
 function setUp() {
-    let userID = '';
-
     // Add user
     cy.fixture('user').as('userJson').then(function (userJson) {
         cy.request({
@@ -10,26 +8,25 @@ function setUp() {
             method: 'POST'
         }).then((response) => {
             cy.writeFile('cypress/fixtures/userid.json', response.body)
+            cy.wrap(response.body['_id']['$oid']).as('currentUserID');
         })
     })
 
-    cy.readFile('cypress/fixtures/userid.json').then((userObject) => {
-        userID = userObject['_id']['$oid'];
-    });
-
     // Add task to user
     cy.fixture('tasks').as('tasksJson').then(function (taskJson) {
-        cy.request({
-            url: 'http://localhost:5000/tasks/create',
-            form: true,
-            body: {
-                'title': taskJson.title,
-                'description': '(add a description here)',
-                'userid': userID,
-                'url': taskJson.url,
-                'todos': 'Watch video'
-            },
-            method: 'POST'
+        cy.get('@currentUserID').then(currentUserID => {
+            cy.request({
+                url: 'http://localhost:5000/tasks/create',
+                form: true,
+                body: {
+                    'title': taskJson.title,
+                    'description': '(add a description here)',
+                    'userid': currentUserID,
+                    'url': taskJson.url,
+                    'todos': 'Watch video'
+                },
+                method: 'POST'
+            })
         })
     })
 }
@@ -54,16 +51,10 @@ function loginAndOpenTask() {
 }
 
 function tearDown() {
-    let userID = '';
-
-    cy.readFile('cypress/fixtures/userid.json').then((userObject) => {
-        userID = userObject['_id']['$oid'];
-    });
-
-    cy.fixture('userid').as('useridJson').then(function () {
+    cy.get('@currentUserID').then(currentUserID => {
         // Delete user
         cy.request({
-            url: `http://localhost:5000/users/${userID}`,
+            url: `http://localhost:5000/users/${currentUserID}`,
             method: 'DELETE'
         })
     })
@@ -84,8 +75,6 @@ describe('Users task testing', () => {
         // Check that the description contains the correct value after type
         cy.get('.inline-form').find('input[type=text]').type('New todo')
             .should("contain.value", 'New todo')
-
-        cy.get('.inline-form').find('input[type=text]').clear()
     });
 
     // R8UC1 - PRESSES ADD BUTTON
@@ -100,46 +89,44 @@ describe('Users task testing', () => {
         })
     });
 
-    it('should allow the user to create new todo item is at the bottom of the list', () => {
-        // Check if the item is at the bottom of the list
-    });
-
-     it('should NOT allow the user to create new todo item when description is empty', () => {
-         // Check so that the length is the same/expected value
-         cy.get('.inline-form').find('input[type=text]').clear()
-
-         cy.get(".todo-list form").submit()
-
-         cy.get(".todo-list .todo-item").should(($todoList) => {
-             expect($todoList).to.have.length(1);
-         })
-     });
-
-
-     // R8UC2 - CLICKS ON ICON IN FRONT OF THE DESCRIPTION
-     it('should make the todo item border red if its set to done', () => {
-         // Check after a red border
-     });
-
-     it('should set active task to done if clicked', () => {
-         // Check that the task is set to done
-     });
-
-     it('should done task should have its text struck through', () => {
-         // Check that the tasks text is struck through
-     });
-
-     it('should set done task to active if clicked', () => {
-         // Check so that the task is set to active
-     });
-
-     it('should remove the struck through text after task is set to active from done', () => {
-         // Check if text is not struck through
-     });
-
-
-     // R8UC3 - CLICKS ON THE X SYMBOL BEHIND THE DESCRIPTION
-    it('should remove todo from list if task is deleted', () => {
-        // Check that the length of the list is -1 or the expected value.
-    });
+    // it('should allow the user to create new todo item is at the bottom of the list', () => {
+    //     // Check if the item is at the bottom of the list
+    // });
+    //
+    // it('should NOT allow the user to create new todo item when description is empty', () => {
+    //     // Check so that the length is the same/expected value
+    //     cy.get(".todo-list form").submit()
+    //
+    //     cy.get(".todo-list .todo-item").should(($todoList) => {
+    //         expect($todoList).to.have.length(1);
+    //     })
+    // });
+    //
+    //
+    // // R8UC2 - CLICKS ON ICON IN FRONT OF THE DESCRIPTION
+    // it('should make the todo item border red if its set to done', () => {
+    //     // Check after a red border
+    // });
+    //
+    // it('should set active task to done if clicked', () => {
+    //     // Check that the task is set to done
+    // });
+    //
+    // it('should done task should have its text struck through', () => {
+    //     // Check that the tasks text is struck through
+    // });
+    //
+    // it('should set done task to active if clicked', () => {
+    //     // Check so that the task is set to active
+    // });
+    //
+    // it('should remove the struck through text after task is set to active from done', () => {
+    //     // Check if text is not struck through
+    // });
+    //
+    //
+    // // R8UC3 - CLICKS ON THE X SYMBOL BEHIND THE DESCRIPTION
+    // it('should remove todo from list if task is deleted', () => {
+    //     // Check that the length of the list is -1 or the expected value.
+    // });
 })
