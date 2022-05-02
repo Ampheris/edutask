@@ -32,7 +32,6 @@ function setUp() {
 }
 
 function loginAndOpenTask() {
-    // Go to website
     cy.visit('http://localhost:3000/')
 
     cy.get('h1').should('contain.text', 'Login')
@@ -89,44 +88,42 @@ describe('Users task testing', () => {
         })
     });
 
-    // it('should allow the user to create new todo item is at the bottom of the list', () => {
-    //     // Check if the item is at the bottom of the list
-    // });
-    //
-    // it('should NOT allow the user to create new todo item when description is empty', () => {
-    //     // Check so that the length is the same/expected value
-    //     cy.get(".todo-list form").submit()
-    //
-    //     cy.get(".todo-list .todo-item").should(($todoList) => {
-    //         expect($todoList).to.have.length(1);
-    //     })
-    // });
-    //
-    //
-    // // R8UC2 - CLICKS ON ICON IN FRONT OF THE DESCRIPTION
-    // it('should make the todo item border red if its set to done', () => {
-    //     // Check after a red border
-    // });
-    //
-    // it('should set active task to done if clicked', () => {
-    //     // Check that the task is set to done
-    // });
-    //
-    // it('should done task should have its text struck through', () => {
-    //     // Check that the tasks text is struck through
-    // });
-    //
-    // it('should set done task to active if clicked', () => {
-    //     // Check so that the task is set to active
-    // });
-    //
-    // it('should remove the struck through text after task is set to active from done', () => {
-    //     // Check if text is not struck through
-    // });
-    //
-    //
-    // // R8UC3 - CLICKS ON THE X SYMBOL BEHIND THE DESCRIPTION
-    // it('should remove todo from list if task is deleted', () => {
-    //     // Check that the length of the list is -1 or the expected value.
-    // });
+    it('should allow the user to create new todo item is at the bottom of the list', () => {
+        // Check if the item is at the bottom of the list
+    });
+
+    it('should NOT allow the user to create new todo item when description is empty', () => {
+        // Check so that the length is the same/expected value
+        cy.get(".todo-list form").find('input[type=submit]').should('be.disabled')
+
+        cy.get(".todo-list .todo-item").should("have.length", 1)
+    });
+
+
+    // R8UC2 - CLICKS ON ICON IN FRONT OF THE DESCRIPTION
+    it('should make the todo item border red if its set to done', () => {
+        // Check after a red border
+    });
+
+    it('should set active task to done if clicked', () => {
+        // Check that the task is set to done
+    });
+
+    it('should done task should have its text struck through', () => {
+        // Check that the tasks text is struck through
+    });
+
+    it('should set done task to active if clicked', () => {
+        // Check so that the task is set to active
+    });
+
+    it('should remove the struck through text after task is set to active from done', () => {
+        // Check if text is not struck through
+    });
+
+
+    // R8UC3 - CLICKS ON THE X SYMBOL BEHIND THE DESCRIPTION
+    it('should remove todo from list if task is deleted', () => {
+        // Check that the length of the list is -1 or the expected value.
+    });
 })
