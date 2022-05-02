@@ -59,7 +59,7 @@ function tearDown() {
     })
 }
 
-describe('User enters a new tasks description', () => {
+describe('Users task testing', () => {
     before(() => {
         setUp()
         loginAndOpenTask()
