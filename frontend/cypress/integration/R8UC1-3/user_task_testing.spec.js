@@ -100,9 +100,9 @@ describe('Users task testing', () => {
         })
     });
 
-    /* it('should allow the user to create new todo item is at the bottom of the list', () => {
-         // Check if the item is at the bottom of the list
-     });
+    it('should allow the user to create new todo item is at the bottom of the list', () => {
+        // Check if the item is at the bottom of the list
+    });
 
      it('should NOT allow the user to create new todo item when description is empty', () => {
          // Check so that the length is the same/expected value
@@ -139,7 +139,7 @@ describe('Users task testing', () => {
 
 
      // R8UC3 - CLICKS ON THE X SYMBOL BEHIND THE DESCRIPTION
-     it('should remove todo from list if task is deleted', () => {
-         // Check that the length of the list is -1 or the expected value.
-     });*/
+    it('should remove todo from list if task is deleted', () => {
+        // Check that the length of the list is -1 or the expected value.
+    });
 })
