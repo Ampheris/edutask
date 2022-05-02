@@ -29,10 +29,24 @@ function setUp() {
         })
     })
 
-    // Log in
-    cy.fixture('user').as('userJson').then(function (userJson) {
-        cy.request('GET', `http://localhost:5000/users/bymail/${userJson.email}`)
-    })
+    // Go to website
+    cy.visit('http://localhost:3000/')
+}
+
+function login() {
+    cy.get('h1').should('contain.text', 'Login')
+
+    cy.contains('div', 'Email Address').find('input')
+        .type('ampheris@gmail.com')
+
+    // submit form
+    cy.get('form').submit()
+
+    // Assert that the user is logged in
+    cy.get('h1')
+        .should("contain.text", 'Your tasks, Mathilda Holmström')
+
+    cy.wait(5000)
 }
 
 function tearDown() {
@@ -46,17 +60,15 @@ function tearDown() {
 }
 
 describe('User enters a new tasks description', () => {
-    beforeEach(() => {
+    before(() => {
         setUp()
+        login()
     })
 
-    afterEach(() => {
+    after(() => {
         tearDown()
     })
 
-    it('should allow user to type in a description', function () {
-        cy.wait(1000)
-        /*cy.get('input').find('[type="text"]').type('test test')
-            .next().should('contain', 'test test')*/
-    });
+
+
 })
