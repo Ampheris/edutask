@@ -69,8 +69,9 @@ describe('User enters a new tasks description', () => {
         tearDown()
     })
 
-    it('should open up the test task', function () {
-
+    it('should allow user to type in a description', function () {
+        cy.get('.inline-form').find('input[type=text]').type('Test description')
+            .should("contain.value", 'Test description')
     });
 
 })
