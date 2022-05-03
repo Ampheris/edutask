@@ -83,9 +83,7 @@ describe('Users task testing', () => {
 
         cy.get(".todo-list form").submit()
 
-        cy.get(".todo-list .todo-item").should(($todoList) => {
-            expect($todoList).to.have.length(2);
-        })
+        cy.get(".todo-list .todo-item").should("have.length", 2)
     });
 
     it('should allow the user to create new todo item is at the bottom of the list', () => {
@@ -125,5 +123,8 @@ describe('Users task testing', () => {
     // R8UC3 - CLICKS ON THE X SYMBOL BEHIND THE DESCRIPTION
     it('should remove todo from list if task is deleted', () => {
         // Check that the length of the list is -1 or the expected value.
+        cy.get(".todo-list .todo-item").find('span[class=remover]').click().click()
+
+        cy.get(".todo-list li").should("have.length", 1)
     });
 })
