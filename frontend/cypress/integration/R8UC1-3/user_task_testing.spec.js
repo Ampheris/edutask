@@ -105,14 +105,21 @@ describe('Users task testing', () => {
 
     it('should set active task to done if clicked', () => {
         // Check that the task is set to done
+        cy.get(".todo-list .todo-item").find('span[class="checker unchecked"]').click().click()
+        cy.get(".todo-list .todo-item .checker").should("have.class", 'checked')
     });
 
     it('should done task should have its text struck through', () => {
         // Check that the tasks text is struck through
+        cy.get(".todo-list .todo-item .checker").click().click()
+
+        cy.get(".todo-list .todo-item .editable")
+            .should("have.css", 'text-decoration', 'line-through solid rgb(49, 46, 46)')
     });
 
     it('should set done task to active if clicked', () => {
         // Check so that the task is set to active
+
     });
 
     it('should remove the struck through text after task is set to active from done', () => {
