@@ -34,17 +34,11 @@ function setUp() {
 function loginAndOpenTask() {
     cy.visit('http://localhost:3000/')
 
-    cy.get('h1').should('contain.text', 'Login')
-
     cy.contains('div', 'Email Address').find('input')
         .type('ampheris@gmail.com')
 
     // submit form
     cy.get('form').submit()
-
-    // Assert that the user is logged in
-    cy.get('h1')
-        .should("contain.text", 'Your tasks, Mathilda Holmström')
 
     cy.get(".container-element a").click()
 }
@@ -97,12 +91,15 @@ describe('Users task testing', () => {
         cy.get(".todo-list .todo-item").should("have.length", 1)
     });
 
-
-    // R8UC2 - CLICKS ON ICON IN FRONT OF THE DESCRIPTION
-    it('should make the todo item border red if its set to done', () => {
+    it('should make the task description input border red if its set to done', () => {
         // Check after a red border
+        cy.get(".todo-list form").find('input[type=submit]')
+            .click().click({force: true})
+            .should('have.css', 'border-color', 'red')
     });
 
+
+    // R8UC2 - CLICKS ON ICON IN FRONT OF THE DESCRIPTION
     it('should set active task to done if clicked', () => {
         // Check that the task is set to done
         cy.get(".todo-list .todo-item").find('span[class="checker unchecked"]').click().click()
@@ -120,10 +117,25 @@ describe('Users task testing', () => {
     it('should set done task to active if clicked', () => {
         // Check so that the task is set to active
 
+        // set to done
+        cy.get(".todo-list .todo-item .checker").click().click()
+
+        // set to active
+        cy.get(".todo-list .todo-item .checker").click()
+
+        cy.get(".todo-list .todo-item .checker").should("have.class", 'unchecked')
     });
 
     it('should remove the struck through text after task is set to active from done', () => {
         // Check if text is not struck through
+
+        // set to done
+        cy.get(".todo-list .todo-item .checker").click().click()
+
+        // set to active
+        cy.get(".todo-list .todo-item .checker").click()
+
+            .should("not.have.css", 'text-decoration', 'line-through solid rgb(49, 46, 46)')
     });
 
 
